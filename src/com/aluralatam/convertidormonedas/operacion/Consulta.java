@@ -1,5 +1,6 @@
 package com.aluralatam.convertidormonedas.operacion;
 
+import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
@@ -11,19 +12,20 @@ import com.aluralatam.convertidormonedas.modelos.MonedaApi;
 
 public class Consulta {
 
-    private String apiKey = "";
-    private String url = "http://" + apiKey + "" ;
+    private String apiKey = "172323dd37f35ae3cec3fbe1";
+    private String url = "https://v6.exchangerate-api.com/v6/" + apiKey + "/latest/MXN" ;
 
-    public Moneda CrearMonedas(String Nombre){
+    public String ConsultaMoneda(String Nombre) throws IOException, InterruptedException{
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder().uri(URI.create(url)).build();
 
         HttpResponse<String> response = client.send(request, BodyHandlers.ofString());
         
+        String data = response.body();
+        String divisa;
+        int valor;
         
-
-        MonedaApi moneda = new MonedaApi();
-        return
+        return data;
         
 
 
