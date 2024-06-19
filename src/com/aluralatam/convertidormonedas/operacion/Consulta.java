@@ -23,8 +23,6 @@ public class Consulta {
         HttpResponse<String> response = client.send(request, BodyHandlers.ofString());
         
         String data = response.body();
-        String divisa;
-        int valor;
         
         return data;
         
