@@ -1,22 +1,22 @@
 package com.aluralatam.convertidormonedas.principal;
 
-import com.aluralatam.convertidormonedas.modelos.Monedas;
+import com.aluralatam.convertidormonedas.modelos.MonedasAPI;
+import com.aluralatam.convertidormonedas.modelos.MonedasUsar;
 import com.aluralatam.convertidormonedas.operacion.Consulta;
-import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-
-import netscape.javascript.JSException;
 
 public class Main {
     public static void main(String[] args) {
 
         Consulta consulta = new Consulta();
+        MonedasUsar  = new MonedasUsar();
+        
 
         try {
             Gson gson = new GsonBuilder().setPrettyPrinting().create();
             String json = consulta.ConsultaMoneda("MXN");
-            Monedas monedas = gson.fromJson(json, Monedas.class);
+            MonedasAPI monedas = gson.fromJson(json, MonedasAPI.class);
             System.out.println(monedas.conversion_rates.getARS());
             // System.out.println(json);
             // Monedas monedas = gson.fromJson(json, Monedas.class);

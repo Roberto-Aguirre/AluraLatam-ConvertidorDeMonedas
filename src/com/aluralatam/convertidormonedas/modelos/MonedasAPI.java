@@ -1,11 +1,11 @@
 package com.aluralatam.convertidormonedas.modelos;
 
-public class Monedas {
+public class MonedasAPI {
     String result;
     String documentation;
     String base_code;
 
-    public ConversionRates conversion_rates;
+    public ConversionRatesAPI conversion_rates;
 
     public String getResult() {
         return result;
@@ -19,7 +19,7 @@ public class Monedas {
         return base_code;
     }
 
-    public ConversionRates getConversion_rates() {
+    public ConversionRatesAPI getConversion_rates() {
         return conversion_rates;
     }
 

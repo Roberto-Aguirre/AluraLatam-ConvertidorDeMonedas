@@ -1,6 +1,6 @@
 package com.aluralatam.convertidormonedas.modelos;
 
-public class ConversionRates {
+public class ConversionRatesAPI {
 
     private float MXN;
     private float ARS;
@@ -36,6 +36,10 @@ public class ConversionRates {
 
     public float getUSD() {
         return USD;
+    }
+
+    public float Identificar(String e){
+       return (float) 1.234;
     }
 
 }
