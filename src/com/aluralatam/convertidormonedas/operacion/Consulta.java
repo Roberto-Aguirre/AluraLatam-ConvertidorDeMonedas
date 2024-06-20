@@ -9,24 +9,24 @@ import java.net.http.HttpResponse.BodyHandlers;
 import java.util.Arrays;
 import java.util.List;
 
+import com.aluralatam.convertidormonedas.modelos.Monedas;
+import com.google.gson.Gson;
+
 public class Consulta {
 
     private String apiKey = "172323dd37f35ae3cec3fbe1";
-    private String url = "https://v6.exchangerate-api.com/v6/" + apiKey + "/latest/MXN" ;
 
-    public List<String> valoresPermitidos = Arrays.asList("MXN","ARS","BOB","BRL","CPL","COP","USD");
-    
-    public String ConsultaMoneda(String Nombre) throws IOException, InterruptedException{
+    public String ConsultaMoneda(String Nombre) throws IOException, InterruptedException {
+        String url = "https://v6.exchangerate-api.com/v6/" + apiKey + "/latest/" + Nombre;
+
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder().uri(URI.create(url)).build();
 
         HttpResponse<String> response = client.send(request, BodyHandlers.ofString());
-        
-        String data = response.body();
-        
-        return data;
-        
+        Gson gson = new Gson();
 
+        String data = response.body();
+        return data;
 
     }
 }
