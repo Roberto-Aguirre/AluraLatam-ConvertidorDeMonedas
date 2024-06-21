@@ -25,13 +25,6 @@ public class MonedasUsar {
     }
     
     public HashMap<String,Float> crearMonedas(MonedasAPI monedasAPI){
-        // Moneda MXN = new Moneda("MXN", monedasAPI.conversion_rates.getMXN());
-        // Moneda ARS = new Moneda("ARS", monedasAPI.conversion_rates.getARS());
-        // Moneda BOB = new Moneda("BOB", monedasAPI.conversion_rates.getBOB());
-        // Moneda BRL = new Moneda("BRL", monedasAPI.conversion_rates.getBRL());
-        // Moneda CLP = new Moneda("CPL", monedasAPI.conversion_rates.getCLP());
-        // Moneda COP = new Moneda("COP", monedasAPI.conversion_rates.getCOP());
-        // Moneda USD = new Moneda("USD", monedasAPI.conversion_rates.getUSD());
         mapa.put("MXN", monedasAPI.conversion_rates.getMXN());
         mapa.put("ARS", monedasAPI.conversion_rates.getARS());
         mapa.put("BOB", monedasAPI.conversion_rates.getBOB());

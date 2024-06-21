@@ -8,22 +8,13 @@ import com.google.gson.GsonBuilder;
 
 public class Main {
     public static void main(String[] args) {
-        MonedasUsar a = new MonedasUsar();
+        
         Consulta consulta = new Consulta();        
 
         try {
-
-            
-            Gson gson = new GsonBuilder().setPrettyPrinting().create();
+    
             String json = consulta.ConsultaMoneda("MXN");
-            MonedasAPI monedas = gson.fromJson(json, MonedasAPI.class);
-            System.out.println(a.crearMonedas(monedas));
-        
-            
-            // System.out.println(json);
-            // Monedas monedas = gson.fromJson(json, Monedas.class);
-            // System.out.println(monedas);
-            // Valores valores = gson.fromJson(json, Valores.class);
+            System.out.println(consulta.conversionAObjetos(json));
 
         } catch (Exception e) {
             System.out.println(e.getMessage());
