@@ -4,7 +4,7 @@ import java.util.HashMap;
 
 public class MonedasUsar {
 
-    private MonedasAPI monedasAPI = new MonedasAPI();
+    
     public HashMap<String, Float> mapa = new HashMap<String, Float>();
 
     public class Moneda {
