@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-# AluraLatam-ConvertidorDeMonedas
-=======
-
 # AluraLatam-ConvertidorDeMonedas
 
 Una pequeña introducción a los componentes y al uso del proyecto desarrollado.
@@ -107,4 +103,4 @@ Gracias por utilizar mi conversor de monedas
 
 - [@Roberto-Aguirre](https://www.github.com/Roberto-Aguirre)
 
->>>>>>> dev
+>>>>>>> Gracias por leer el readme y espero contribuir a más proyector propios o en compañia.
