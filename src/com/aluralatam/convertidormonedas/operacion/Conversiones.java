@@ -19,10 +19,10 @@ public class Conversiones {
 
    public ValoresFinal crearResultadoInverso(ValoresIniciales e,HashMap<String,Float> b){
 
-    float conversion = e.valor * b.get(e.monedaFinal);
-    float resultado = b.get(e.monedaFinal)/conversion;
+    float conversion = e.valor / b.get(e.monedaInicial);
 
-    ValoresFinal objResultado = new ValoresFinal(e.valor,e.monedaInicial,e.monedaFinal,resultado);
+
+    ValoresFinal objResultado = new ValoresFinal(e.valor,e.monedaInicial,e.monedaFinal,conversion);
 
 
     return objResultado;

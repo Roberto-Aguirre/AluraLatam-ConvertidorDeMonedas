@@ -34,8 +34,6 @@ public class MonedasUsar {
         mapa.put("CPL", monedasAPI.conversion_rates.getCLP());
         mapa.put("COP", monedasAPI.conversion_rates.getCOP());
         mapa.put("USD", monedasAPI.conversion_rates.getUSD());
-
-        System.out.println("Listo");
         return mapa;
     }
 
